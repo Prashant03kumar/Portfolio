@@ -6,4 +6,15 @@ import Platforms from "./Platforms";
 import Projects from "./Projects";
 import Footer from "./Footer";
 // import Contact from "./Contact";
-export { Navbar, Hero, Intro, Skills, Platforms, Projects, Footer };
+
+import ScrollToSection from "./Scroll/ScrollToSection";
+export {
+  Navbar,
+  Hero,
+  Intro,
+  Skills,
+  Platforms,
+  Projects,
+  Footer,
+  ScrollToSection,
+};
