@@ -18,5 +18,5 @@ export default function ScrollToSection() {
     }
   }, [pathname]);
 
-  return null;
+  return null;  
 }
