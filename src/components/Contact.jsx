@@ -9,13 +9,37 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logic for handling form submission (e.g., EmailJS or Formspree)
-    console.log("Form Submitted:", formData);
-    alert("Thanks for reaching out, Jatin! I'll get back to you soon.");
-  };
 
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert(`Thanks for reaching out, ${formData.name}!`);
+
+      // Clear inputs
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      alert("Something went wrong!");
+    }
+  };
   return (
     <section
       id="contact"
@@ -38,6 +62,11 @@ export default function Contact() {
           className="bg-gray-900/40 backdrop-blur-md p-8 rounded-3xl border border-white/5 shadow-2xl"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* <input
+              type="hidden"
+              name="access_key"
+              value="c323f07b-09dd-4c8a-a9e8-f6bd3775aa82"
+            ></input> */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name Input */}
               <div>
@@ -46,6 +75,8 @@ export default function Contact() {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
                   required
                   placeholder="Enter your name"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors"
@@ -61,6 +92,8 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
                   required
                   placeholder="Enter your email"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors"
@@ -77,7 +110,9 @@ export default function Contact() {
                 Message
               </label>
               <textarea
+                name="message"
                 required
+                value={formData.message}
                 rows="5"
                 placeholder="How can I help you?"
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors resize-none"

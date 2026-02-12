@@ -1,16 +1,50 @@
-# React + Vite
+# 🌐 Modern React Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### ⚡ Built with React + Vite | 🎨 Tailwind CSS | 🎬 Framer Motion
 
-Currently, two official plugins are available:
+A fully responsive, modern portfolio website built using **React and Vite**, featuring smooth animations, dark UI, and a working contact form powered by Web3Forms.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 **Live Website:** https://your-portfolio-link.com  
+🔗 **GitHub Repository:** https://github.com/yourusername/your-repo-name
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- ✔️ Modern Dark UI
+- ✔️ Fully Responsive (Mobile + Desktop)
+- ✔️ Smooth Animations (Framer Motion)
+- ✔️ Contact Form with Email Integration
+- ✔️ Environment Variable Security
+- ✔️ Fast Build with Vite
+- ✔️ Clean Component-Based Architecture
+
+---
+
+## 🛠 Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Web3Forms API
+- ESLint
+
+---
+
+## 📂 Project Structure
+
+---
+
+If you want, I can now generate:
+
+- 🔥 A premium styled README with badges
+- 📊 GitHub stats integration
+- 🎨 Custom banner header
+- 🧠 Professional “About Me” section for recruiters
+
+Just tell me 🚀
