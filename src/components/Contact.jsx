@@ -62,11 +62,6 @@ export default function Contact() {
           className="bg-gray-900/40 backdrop-blur-md p-8 rounded-3xl border border-white/5 shadow-2xl"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* <input
-              type="hidden"
-              name="access_key"
-              value="c323f07b-09dd-4c8a-a9e8-f6bd3775aa82"
-            ></input> */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name Input */}
               <div>
