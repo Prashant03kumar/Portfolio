@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Navbar from "./Navbar";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,8 +17,12 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="mx-auto max-w-4xl">
+    <section
+      id="contact"
+      className="py-20 px-6 min-h-screen bg-linear-to-br from-black via-gray-950 to-gray-800 bg-fixed"
+    >
+      <Navbar />
+      <div className="mx-auto mt-16 max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white">
             Get In <span className="text-indigo-500">Touch</span>
