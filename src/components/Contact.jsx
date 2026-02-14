@@ -12,13 +12,13 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("https://api.web3forms.com/submit", {
+    const response = await fetch(import.meta.env.VITE_WEB3FORMS_ENDPOINT, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY2,
         name: formData.name,
         email: formData.email,
         message: formData.message,
