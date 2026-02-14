@@ -3,6 +3,7 @@ import App from "./App";
 import Contact from "./components/Contact";
 import "./index.css";
 import { createRoot } from "react-dom/client";
+import { ThemeProvider } from "./context/ThemeContext"; // Import Provider
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -12,5 +13,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />,
+  <ThemeProvider>
+    <RouterProvider router={router} />
+  </ThemeProvider>,
 );
