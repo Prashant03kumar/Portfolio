@@ -6,12 +6,15 @@ import codeforcesIcon from "../assets/codeforces.png";
 import atcoderIcon from "../assets/atcoder.png";
 
 import PlatformCard from "./PlatformCard";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Platforms() {
+  const { isDarkMode } = useTheme();
+
   const platformLinks = [
     {
       name: "LeetCode",
-      icon: leetcodeIcon, // Use the imported variable, not a string
+      icon: leetcodeIcon,
       link: "https://leetcode.com/u/jatin_kumar2005/",
     },
     {
@@ -46,10 +49,21 @@ export default function Platforms() {
       <div className="mx-auto max-w-6xl">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">
-            Coding <span className="text-indigo-500">Profiles</span>
+          <h2
+            className={`text-3xl font-bold transition-colors duration-500 ${
+              isDarkMode ? "text-white" : "text-gray-900"
+            }`}
+          >
+            Coding{" "}
+            <span className={isDarkMode ? "text-indigo-500" : "text-cyan-500"}>
+              Profiles
+            </span>
           </h2>
-          <p className="mt-2 text-gray-400 italic text-lg">
+          <p
+            className={`mt-2 italic text-lg transition-colors duration-500 ${
+              isDarkMode ? "text-gray-400" : "text-cyan-700/80"
+            }`}
+          >
             "Over 2000+ problems solved across all platforms"
           </p>
         </div>
