@@ -5,7 +5,6 @@ export default function Intro() {
   const roles = [
     "Software Engineer",
     "Competitive Programmer",
-    "Full-Stack Developer",
     "AI-ML Specialist",
   ];
 
@@ -91,7 +90,7 @@ export default function Intro() {
 
               <p>
                 Beyond the terminal, I focus on{" "}
-                <strong className="text-white">Full-Stack Development</strong>{" "}
+                <strong className="text-white">Artificial Intelligence</strong>{" "}
                 and <strong className="text-white">Machine Learning</strong>,
                 turning complex data into functional, user-centric solutions
                 that make an impact.

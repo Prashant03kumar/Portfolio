@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="150" viewBox="0 0 400 150" 
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- Decorative smooth wave lines -->
+  <path d="M20 95 Q 80 30 140 95 T260 95 T380 95"
+        stroke="#4C72B0"
+        stroke-width="5"
+        fill="none"
+        stroke-linecap="round"/>
+
+  <path d="M20 110 Q 80 45 140 110 T260 110 T380 110"
+        stroke="#55A868"
+        stroke-width="5"
+        fill="none"
+        stroke-linecap="round"/>
+
+  <path d="M20 125 Q 80 60 140 125 T260 125 T380 125"
+        stroke="#C44E52"
+        stroke-width="5"
+        fill="none"
+        stroke-linecap="round"/>
+
+  <!-- Seaborn Text -->
+  <text x="200" y="60"
+        text-anchor="middle"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="38"
+        font-weight="bold"
+        fill="#2F2F2F">
+    seaborn
+  </text>
+
+</svg>

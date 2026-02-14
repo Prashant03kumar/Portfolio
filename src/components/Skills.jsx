@@ -8,31 +8,29 @@ export default function Skills() {
       skills: [
         { name: "C++", icon: "/icons/cpp.svg" },
         { name: "Python", icon: "/icons/python.svg" },
-        { name: "JavaScript", icon: "/icons/javascript.svg" },
       ],
     },
     {
-      category: "Frameworks & Backend",
+      category: "Frameworks",
       skills: [
-        { name: "React", icon: "/icons/react.svg" },
-        { name: "Node.js", icon: "/icons/node.svg" },
-        { name: "Express", icon: "/icons/express.svg" },
-        { name: "MongoDB", icon: "/icons/mongodb.svg" },
-        { name: "CSS", icon: "/icons/css.svg" },
-      ],
-    },
-    {
-      category: "Data Science & ML",
-      skills: [
+        { name: "Numpy", icon: "/icons/numpy.svg" },
         { name: "Pandas", icon: "/icons/pandas.svg" },
-        { name: "NumPy", icon: "/icons/numpy.svg" },
         { name: "Scikit-Learn", icon: "/icons/scikit.svg" },
         { name: "Matplotlib", icon: "/icons/matplotlib.svg" },
+        { name: "Seaborn", icon: "/icons/seaborn.svg" },
+        { name: "Streamlit", icon: "/icons/streamlit.svg" },
+        { name: "Flask", icon: "/icons/flask.svg" },
+        { name: "FastAPI", icon: "/icons/fastapi.svg" },
       ],
     },
     {
       category: "Tools & Others",
-      skills: [{ name: "Git", icon: "/icons/git.svg" }],
+      skills: [
+        { name: "Git", icon: "/icons/git.svg" },
+        { name: "Ubuntu", icon: "/icons/ubuntu.svg" },
+        { name: "Jira", icon: "/icons/jira.svg" },
+        { name: "Selenium", icon: "/icons/selenium.svg" },
+      ],
     },
   ];
 

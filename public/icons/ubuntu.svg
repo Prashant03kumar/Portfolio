@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Ubuntu Circle -->
+  <circle cx="128" cy="128" r="110" fill="#E95420"/>
+
+  <!-- White Ring -->
+  <circle cx="128" cy="128" r="70"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="18"/>
+
+  <!-- Three Dots -->
+  <circle cx="128" cy="38" r="18" fill="#FFFFFF"/>
+  <circle cx="38" cy="160" r="18" fill="#FFFFFF"/>
+  <circle cx="218" cy="160" r="18" fill="#FFFFFF"/>
+
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Main Top Shape -->
+  <path d="M150 10 
+           L280 140 
+           L150 250 
+           L20 140 Z"
+        fill="#2684FF"/>
+
+  <!-- Inner Light Shape -->
+  <path d="M150 60 
+           L230 140 
+           L150 210 
+           L70 140 Z"
+        fill="#4C9AFF"/>
+
+</svg>

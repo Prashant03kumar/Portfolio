@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="150" viewBox="0 0 400 150"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- Streamlit Icon (simple flame-style shape) -->
+  <path d="M120 95 
+           C105 80, 110 55, 130 45
+           C150 35, 165 55, 155 75
+           C170 70, 175 95, 145 105
+           C135 110, 125 105, 120 95 Z"
+        fill="#FF4B4B"/>
+
+  <!-- Streamlit Text -->
+  <text x="230" y="90"
+        text-anchor="middle"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="40"
+        font-weight="bold"
+        fill="#2F2F2F">
+    streamlit
+  </text>
+
+</svg>
