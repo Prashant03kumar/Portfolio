@@ -11,7 +11,6 @@ export default function Hero() {
       className="pt-16 min-h-screen flex items-center overflow-hidden"
     >
       <div className="mx-auto max-w-5xl px-6">
-        {/* Heading: Hi, I'm JATIN */}
         <motion.h1
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -27,7 +26,7 @@ export default function Hero() {
               isDarkMode ? "text-indigo-500" : "text-cyan-500"
             }`}
           >
-            JATIN
+            PRASHANT
           </span>
         </motion.h1>
 
@@ -48,8 +47,10 @@ export default function Hero() {
             isDarkMode ? "text-gray-400" : "text-cyan-800/70"
           }`}
         >
-          Aspiring Software Developer focused on building clean, efficient, and
-          scalable solutions. Specializing in AI-ML and Competitive Programming.
+          Aspiring Software Developer building scalable Full-Stack applications
+          and AI-ML solutions. A team-oriented problem solver dedicated to
+          turning complex logic into real-world impact through adaptability and
+          efficient collaboration.
         </motion.p>
 
         {/* --- BUTTON SECTION --- */}

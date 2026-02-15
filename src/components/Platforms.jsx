@@ -15,32 +15,32 @@ export default function Platforms() {
     {
       name: "LeetCode",
       icon: leetcodeIcon,
-      link: "https://leetcode.com/u/jatin_kumar2005/",
+      link: "https://leetcode.com/u/prashantcod03/",
     },
     {
       name: "Code360 (Naukri)",
       icon: codestudioIcon,
-      link: "https://www.naukri.com/code360/profile/a0328ff5-69ac-4386-9352-abdfa26377c1",
+      link: "https://www.naukri.com/code360/profile/prashantcode",
     },
     {
       name: "GeeksforGeeks",
       icon: gfgIcon,
-      link: "https://www.geeksforgeeks.org/profile/jatinkumar25",
+      link: "https://www.geeksforgeeks.org/profile/pkritwagaip",
     },
     {
       name: "CodeChef",
       icon: codechefIcon,
-      link: "https://www.codechef.com/users/next_rainbow",
+      link: "https://www.codechef.com/users/prashantcod03",
     },
     {
       name: "Codeforces",
       icon: codeforcesIcon,
-      link: "https://codeforces.com/profile/jatin_kumar25",
+      link: "https://codeforces.com/profile/Prashantcod03",
     },
     {
       name: "AtCoder",
       icon: atcoderIcon,
-      link: "https://atcoder.jp/users/jatin_kumar_25",
+      link: "https://atcoder.jp/users/prashantcode03",
     },
   ];
 
@@ -64,7 +64,7 @@ export default function Platforms() {
               isDarkMode ? "text-gray-400" : "text-cyan-700/80"
             }`}
           >
-            "Over 2000+ problems solved across all platforms"
+            "Over 700+ problems solved across all platforms"
           </p>
         </div>
 

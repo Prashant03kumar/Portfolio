@@ -23,7 +23,7 @@ export default function Footer() {
           >
             © {new Date().getFullYear()}{" "}
             <span className={isDarkMode ? "" : "text-cyan-600"}>
-              Jatin Turk.
+              Prashant Kumar.
             </span>{" "}
             All rights reserved.
           </p>
@@ -39,17 +39,17 @@ export default function Footer() {
                 : "text-cyan-700 hover:text-indigo-600 font-medium"
             }`}
           >
-            brdjatin@gmail.com
+            pkritwan1020@gmail.com
           </a>
           <a
-            href="tel:+919034543477"
+            href="tel:+919528338141"
             className={`transition-colors duration-300 ${
               isDarkMode
                 ? "text-gray-400 hover:text-indigo-400"
                 : "text-cyan-700 hover:text-indigo-600 font-medium"
             }`}
           >
-            +91 9034543477
+            +91 9528338141
           </a>
         </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
         <div className="flex gap-6">
           {/* GitHub */}
           <a
-            href="https://github.com/Jatinkumar2519"
+            href="https://github.com/Prashant03kumar"
             target="_blank"
             rel="noreferrer"
             className={`w-11 h-11 flex items-center justify-center rounded-full transition-all border shadow-sm ${
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/jatinturk/"
+            href="https://www.linkedin.com/in/prashantkumar03/"
             target="_blank"
             rel="noreferrer"
             className={`w-11 h-11 flex items-center justify-center rounded-full transition-all border shadow-sm ${
