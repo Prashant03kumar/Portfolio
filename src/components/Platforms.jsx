@@ -4,6 +4,7 @@ import gfgIcon from "../assets/gfg.png";
 import codechefIcon from "../assets/codechef.jpg";
 import codeforcesIcon from "../assets/codeforces.png";
 import atcoderIcon from "../assets/atcoder.png";
+import csesIcon from "../assets/cses.png";
 
 import PlatformCard from "./PlatformCard";
 import { useTheme } from "../context/ThemeContext";
@@ -41,6 +42,11 @@ export default function Platforms() {
       name: "AtCoder",
       icon: atcoderIcon,
       link: "https://atcoder.jp/users/jatin_kumar_25",
+    },
+    {
+      name: "Cses",
+      icon: csesIcon,
+      link: "https://cses.fi/user/344870",
     },
   ];
 

@@ -23,6 +23,7 @@ export default function Skills() {
         { name: "Streamlit", icon: "/icons/streamlit.svg" },
         { name: "Flask", icon: "/icons/flask.svg" },
         { name: "FastAPI", icon: "/icons/fastapi.svg" },
+        { name: "Scrum", icon: "/icons/scrum.svg" },
       ],
     },
     {
