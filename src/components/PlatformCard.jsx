@@ -13,15 +13,15 @@ export default function PlatformCard({ name, icon, link }) {
         y: -5,
         scale: 1.02,
         backgroundColor: isDarkMode
-          ? "rgba(99, 102, 241, 0.05)"
-          : "rgba(6, 182, 212, 0.05)",
+          ? "rgba(255, 255, 255, 0.05)"
+          : "rgba(0, 0, 0, 0.05)",
       }}
       className={`
         flex items-center gap-4 p-4 backdrop-blur-md rounded-xl border transition-all duration-500 group
         ${
           isDarkMode
-            ? "bg-gray-900/40 border-white/5 hover:border-indigo-500/50"
-            : "bg-white/70 border-cyan-200 shadow-lg shadow-cyan-100/50 hover:border-cyan-400"
+            ? "bg-gray-800/40 border-gray-600/50 hover:border-white/50"
+            : "bg-white/70 border-black/10 shadow-lg shadow-black/10 hover:border-black/50"
         }
       `}
     >
@@ -29,7 +29,7 @@ export default function PlatformCard({ name, icon, link }) {
       <div
         className={`
         w-12 h-12 flex items-center justify-center rounded-lg p-2 transition-colors duration-500
-        ${isDarkMode ? "bg-gray-800/50 group-hover:bg-gray-800" : "bg-cyan-50 group-hover:bg-cyan-100"}
+        ${isDarkMode ? "bg-white/5 group-hover:bg-white/10" : "bg-black/5 group-hover:bg-black/10"}
       `}
       >
         <img
@@ -42,14 +42,14 @@ export default function PlatformCard({ name, icon, link }) {
       <div className="flex flex-col">
         <h4
           className={`font-semibold text-base sm:text-lg transition-colors duration-500 ${
-            isDarkMode ? "text-white" : "text-gray-900"
+            isDarkMode ? "text-white" : "text-black"
           }`}
         >
           {name}
         </h4>
         <span
           className={`text-xs font-medium transition-all group-hover:translate-x-1 ${
-            isDarkMode ? "text-indigo-400" : "text-cyan-600"
+            isDarkMode ? "text-gray-300" : "text-gray-700"
           }`}
         >
           View Profile →

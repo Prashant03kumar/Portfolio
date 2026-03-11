@@ -58,28 +58,28 @@ export default function Intro() {
           shadow-2xl
           ${
             isDarkMode
-              ? "bg-gray-900/40 border-white/5 shadow-black/60"
-              : "bg-white/70 border-cyan-100 shadow-cyan-200/40"
+              ? "bg-gray-800/40 border-white/10 shadow-gray-900/50"
+              : "bg-white/70 border-black/10 shadow-black/10"
           }
         `}
         >
           <div className="flex-1">
-            <h2
-              className={`text-3xl sm:text-5xl font-bold leading-tight transition-colors duration-500 ${
-                isDarkMode ? "text-white" : "text-cyan-950"
-              }`}
-            >
+        <h2
+          className={`text-3xl sm:text-5xl font-bold leading-tight transition-colors duration-500 ${
+            isDarkMode ? "text-white" : "text-black"
+          }`}
+        >
               Hi, I am Prashant, a
             </h2>
 
             <h2
               className={`text-3xl sm:text-5xl font-bold mt-2 min-h-15 transition-colors duration-500 ${
-                isDarkMode ? "text-indigo-500" : "text-cyan-600"
+                isDarkMode ? "text-white" : "text-black"
               }`}
             >
               {text}
               <span
-                className={`animate-pulse ${isDarkMode ? "text-gray-400" : "text-cyan-300"}`}
+                className={`animate-pulse ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}
               >
                 |
               </span>
@@ -87,14 +87,14 @@ export default function Intro() {
 
             <div
               className={`space-y-6 mt-6 text-lg leading-relaxed max-w-2xl transition-colors duration-500 ${
-                isDarkMode ? "text-gray-400" : "text-cyan-900/80"
+                isDarkMode ? "text-gray-300" : "text-gray-700"
               }`}
             >
               <p>
                 I am a{" "}
                 <strong
                   className={
-                    isDarkMode ? "text-white" : "text-cyan-700 font-bold"
+                    isDarkMode ? "text-white" : "text-black font-bold"
                   }
                 >
                   CSE (AI-ML)
@@ -102,7 +102,7 @@ export default function Intro() {
                 student who codes to solve{" "}
                 <strong
                   className={
-                    isDarkMode ? "text-indigo-400" : "text-cyan-600 font-bold"
+                    isDarkMode ? "text-gray-400" : "text-black font-bold"
                   }
                 >
                   real-world problems
@@ -119,7 +119,7 @@ export default function Intro() {
                   className={
                     isDarkMode
                       ? "text-white font-medium"
-                      : "text-cyan-800 font-bold"
+                      : "text-black font-bold"
                   }
                 >
                   LeetCode Rating of 1577
@@ -127,7 +127,7 @@ export default function Intro() {
                 , I have mastered logic and data structures by solving
                 <strong
                   className={
-                    isDarkMode ? "text-indigo-400" : "text-cyan-600 font-bold"
+                    isDarkMode ? "text-gray-400" : "text-black font-bold"
                   }
                 >
                   {" "}
@@ -143,7 +143,7 @@ export default function Intro() {
                   className={
                     isDarkMode
                       ? "text-white font-medium"
-                      : "text-cyan-700 font-bold"
+                      : "text-black font-bold"
                   }
                 >
                   Full-Stack Development
@@ -153,7 +153,7 @@ export default function Intro() {
                   className={
                     isDarkMode
                       ? "text-white font-medium"
-                      : "text-cyan-700 font-bold"
+                      : "text-black font-bold"
                   }
                 >
                   AI-ML
@@ -169,7 +169,7 @@ export default function Intro() {
               <div
                 className={`
                   absolute bottom-1/4 left-1/2 -translate-x-1/2 w-4/5 h-4/5 rounded-full blur-[80px] transition-all duration-1000 -z-10
-                  ${isDarkMode ? "bg-indigo-600/20" : "bg-cyan-400/40"}
+                  ${isDarkMode ? "bg-white/10" : "bg-black/10"}
                 `}
               ></div>
 
@@ -180,8 +180,8 @@ export default function Intro() {
                 bg-linear-to-r from-transparent via-current to-transparent
                 ${
                   isDarkMode
-                    ? "text-indigo-500 shadow-[0_4px_15px_rgba(99,102,241,0.6)]"
-                    : "text-cyan-500 shadow-[0_4px_15px_rgba(6,182,212,0.6)]"
+                    ? "text-white shadow-[0_4px_15px_rgba(255,255,255,0.6)]"
+                    : "text-black shadow-[0_4px_15px_rgba(0,0,0,0.6)]"
                 }`}
               ></div>
 

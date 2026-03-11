@@ -17,13 +17,13 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}
           className={`text-4xl sm:text-7xl font-bold leading-tight transition-colors duration-500 ${
-            isDarkMode ? "text-white" : "text-gray-900"
+            isDarkMode ? "text-white" : "text-black"
           }`}
         >
           Hi, I’m{" "}
           <span
             className={`text-5xl sm:text-8xl transition-colors duration-500 ${
-              isDarkMode ? "text-indigo-500" : "text-cyan-500"
+              isDarkMode ? "text-white" : "text-black"
             }`}
           >
             PRASHANT
@@ -33,7 +33,7 @@ export default function Hero() {
         {/* Underline */}
         <div
           className={`mt-4 h-1.5 w-24 rounded-full transition-colors duration-500 ${
-            isDarkMode ? "bg-indigo-900/50" : "bg-cyan-200"
+            isDarkMode ? "bg-white/50" : "bg-black/20"
           }`}
         ></div>
 
@@ -44,7 +44,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
           className={`mt-6 max-w-2xl text-lg sm:text-xl italic transition-colors duration-500 ${
-            isDarkMode ? "text-gray-400" : "text-cyan-800/70"
+            isDarkMode ? "text-gray-300" : "text-gray-700"
           }`}
         >
           Aspiring Software Developer building scalable Full-Stack applications
@@ -66,14 +66,14 @@ export default function Hero() {
             to="/contact" // Update this to match your routing (/contact or /#contact)
             className={`flex items-center gap-2 px-8 py-3.5 font-bold rounded-full transition-all shadow-xl active:scale-95 hover:-translate-y-1 ${
               isDarkMode
-                ? "bg-indigo-600 text-white hover:bg-indigo-500 shadow-indigo-500/20"
-                : "bg-linear-to-r from-cyan-500 to-blue-500 text-white hover:shadow-cyan-500/40 shadow-cyan-200"
+                ? "bg-white text-black hover:bg-gray-200 shadow-white/20"
+                : "bg-black text-white hover:bg-gray-800 shadow-black/20"
             }`}
           >
             <img
               src="/icons/connect.svg"
               alt="connect"
-              className="w-5 h-5 invert"
+              className={`w-5 h-5 ${isDarkMode ? "invert-0" : "invert"}`}
             />
             Connect
           </NavLink>
@@ -84,8 +84,8 @@ export default function Hero() {
             download="Jatin_Resume.pdf"
             className={`flex items-center gap-2 px-8 py-3.5 border-2 font-bold rounded-full transition-all active:scale-95 hover:-translate-y-1 ${
               isDarkMode
-                ? "border-gray-700 text-gray-300 hover:bg-white/5 hover:border-white"
-                : "border-cyan-200 text-cyan-900 hover:bg-cyan-50 hover:border-cyan-500 shadow-sm"
+                ? "border-gray-500 text-gray-300 hover:bg-white/10 hover:border-white hover:text-white"
+                : "border-gray-400 text-gray-700 hover:bg-black/5 hover:border-black hover:text-black"
             }`}
           >
             <img

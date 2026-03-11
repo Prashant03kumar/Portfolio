@@ -7,22 +7,20 @@ export default function Footer() {
 
   return (
     <footer
-      className={`w-full py-12 border-t backdrop-blur-md transition-all duration-500 ${
-        isDarkMode
-          ? "border-white/5 bg-gray-900/20"
-          : "border-cyan-100 bg-white/40"
-      }`}
+      className={`w-full py-12 border-t backdrop-blur-md transition-all duration-500 ${isDarkMode
+          ? "border-white/5 bg-black/20"
+          : "border-black/10 bg-white/40"
+        }`}
     >
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Left Side: Brand & Rights */}
         <div className="text-center md:text-left">
           <p
-            className={`text-sm font-medium transition-colors duration-500 ${
-              isDarkMode ? "text-gray-500" : "text-cyan-800/60"
-            }`}
+            className={`text-sm font-medium transition-colors duration-500 ${isDarkMode ? "text-gray-400" : "text-gray-700"
+              }`}
           >
             © {new Date().getFullYear()}{" "}
-            <span className={isDarkMode ? "" : "text-cyan-600"}>
+            <span className={isDarkMode ? "text-white" : "text-black"}>
               Prashant Kumar.
             </span>{" "}
             All rights reserved.
@@ -32,22 +30,20 @@ export default function Footer() {
         {/* Center: Contact Info */}
         <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-8 text-sm">
           <a
-            href="mailto:brdjatin@gmail.com"
-            className={`transition-colors duration-300 ${
-              isDarkMode
-                ? "text-gray-400 hover:text-indigo-400"
-                : "text-cyan-700 hover:text-indigo-600 font-medium"
-            }`}
+            href="mailto:pkritwan1020@gmail.com"
+            className={`transition-colors duration-300 ${isDarkMode
+                ? "text-gray-400 hover:text-white"
+                : "text-gray-700 hover:text-black font-medium"
+              }`}
           >
             pkritwan1020@gmail.com
           </a>
           <a
             href="tel:+919528338141"
-            className={`transition-colors duration-300 ${
-              isDarkMode
-                ? "text-gray-400 hover:text-indigo-400"
-                : "text-cyan-700 hover:text-indigo-600 font-medium"
-            }`}
+            className={`transition-colors duration-300 ${isDarkMode
+                ? "text-gray-400 hover:text-white"
+                : "text-gray-700 hover:text-black font-medium"
+              }`}
           >
             +91 9528338141
           </a>
@@ -60,11 +56,10 @@ export default function Footer() {
             href="https://github.com/Prashant03kumar"
             target="_blank"
             rel="noreferrer"
-            className={`w-11 h-11 flex items-center justify-center rounded-full transition-all border shadow-sm ${
-              isDarkMode
-                ? "bg-white/5 border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/10"
-                : "bg-white border-cyan-200 hover:border-cyan-500 hover:bg-cyan-50 shadow-cyan-100"
-            }`}
+            className={`w-11 h-11 flex items-center justify-center rounded-full transition-all border shadow-sm ${isDarkMode
+                ? "bg-white/5 border-white/10 hover:border-white/50 hover:bg-white/10"
+                : "bg-white border-black/10 hover:border-black/50 hover:bg-black/5 shadow-black/10"
+              }`}
           >
             <img
               src={githubIcon}
@@ -78,11 +73,10 @@ export default function Footer() {
             href="https://www.linkedin.com/in/prashantkumar03/"
             target="_blank"
             rel="noreferrer"
-            className={`w-11 h-11 flex items-center justify-center rounded-full transition-all border shadow-sm ${
-              isDarkMode
-                ? "bg-white/5 border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/10"
-                : "bg-white border-cyan-200 hover:border-cyan-500 hover:bg-cyan-50 shadow-cyan-100"
-            }`}
+            className={`w-11 h-11 flex items-center justify-center rounded-full transition-all border shadow-sm ${isDarkMode
+                ? "bg-white/5 border-white/10 hover:border-white/50 hover:bg-white/10"
+                : "bg-white border-black/10 hover:border-black/50 hover:bg-black/5 shadow-black/10"
+              }`}
           >
             <img
               src={linkedinIcon}

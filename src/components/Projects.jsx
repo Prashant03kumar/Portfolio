@@ -42,11 +42,11 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl">
         <h2
           className={`text-3xl font-bold mb-12 text-center transition-colors duration-500 ${
-            isDarkMode ? "text-white" : "text-gray-900"
+            isDarkMode ? "text-white" : "text-black"
           }`}
         >
           Featured{" "}
-          <span className={isDarkMode ? "text-indigo-500" : "text-cyan-500"}>
+          <span className={isDarkMode ? "text-white" : "text-black"}>
             Projects
           </span>
         </h2>
@@ -58,8 +58,8 @@ export default function Projects() {
               whileHover={{ y: -10 }}
               className={`backdrop-blur-md rounded-2xl border overflow-hidden flex flex-col transition-all duration-500 shadow-xl ${
                 isDarkMode
-                  ? "bg-gray-900/40 border-white/5 shadow-black/40"
-                  : "bg-white/80 border-cyan-100 shadow-cyan-100/50"
+                  ? "bg-gray-800/40 border-gray-600/50 shadow-gray-900/50"
+                  : "bg-white/80 border-black/10 shadow-black/10"
               }`}
             >
               {/* Project Image */}
@@ -76,7 +76,7 @@ export default function Projects() {
                 <div className="flex justify-between items-start mb-2">
                   <h3
                     className={`text-xl font-bold leading-tight transition-colors duration-500 ${
-                      isDarkMode ? "text-white" : "text-gray-900"
+                      isDarkMode ? "text-white" : "text-black"
                     }`}
                   >
                     {project.title}
@@ -109,8 +109,8 @@ export default function Projects() {
                       key={tIdx}
                       className={`text-[10px] uppercase tracking-wider px-2 py-1 rounded-md border transition-all duration-500 ${
                         isDarkMode
-                          ? "bg-indigo-500/10 text-indigo-400 border-indigo-500/20"
-                          : "bg-cyan-500/10 text-cyan-700 border-cyan-500/20"
+                          ? "bg-white/10 text-white border-white/20"
+                          : "bg-black/10 text-black border-black/20"
                       }`}
                     >
                       {tag}

@@ -16,15 +16,14 @@ import "./App.css";
 function App() {
   const { isDarkMode } = useTheme();
 
-  // Note: Changed 'aqua' to 'cyan' to match standard Tailwind palettes
-  // Added a soft gray-50 middle step for a cleaner Light Mode transition
-  const bgClass = isDarkMode
-    ? "from-black via-gray-950 to-gray-800"
-    : "from-white via-cyan-50 to-cyan-400";
+  const bgStyle = isDarkMode
+    ? { backgroundImage: "linear-gradient(to bottom right, black 60%, #6b7280 80%, #d1d5db 90%, white 100%)" }
+    : { backgroundImage: "linear-gradient(to bottom right, white 60%, #6b7280 80%, #374151 90%, black 100%)" };
 
   return (
     <div
-      className={`min-h-screen bg-linear-to-br ${bgClass} bg-fixed transition-all duration-700 ease-in-out selection:bg-cyan-500 selection:text-white`}
+      style={bgStyle}
+      className={`min-h-screen bg-fixed transition-all duration-700 ease-in-out selection:bg-cyan-500 selection:text-white`}
     >
       {/* Logic to handle URL hash scrolling */}
       <ScrollToSection />

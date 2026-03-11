@@ -36,8 +36,8 @@ export default function Contact() {
 
   // Dynamic Background Gradient
   const bgGradient = isDarkMode
-    ? "from-black via-gray-950 to-gray-800"
-    : "from-white via-cyan-50 to-cyan-400";
+    ? "from-black from-[70%] via-gray-600 via-[90%] to-white to-[100%]"
+    : "from-white from-[70%] via-gray-400 via-[90%] to-black to-[100%]";
 
   return (
     <section
@@ -48,9 +48,9 @@ export default function Contact() {
       <div className="mx-auto mt-16 max-w-4xl">
         <div className="text-center mb-12">
           <h2
-            className={`text-3xl font-bold transition-colors duration-500 ${isDarkMode ? "text-white" : "text-gray-900"}`}
+            className={`text-3xl font-bold transition-colors duration-500 ${isDarkMode ? "text-white" : "text-black"}`}
           >
-            Get In <span className="text-indigo-500">Touch</span>
+            Get In <span className={isDarkMode ? "text-white" : "text-black"}>Touch</span>
           </h2>
           <p
             className={`mt-2 italic text-sm transition-colors duration-500 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}
@@ -64,8 +64,8 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           className={`backdrop-blur-md p-8 rounded-3xl border transition-all duration-500 shadow-2xl ${
             isDarkMode
-              ? "bg-gray-900/40 border-white/5 shadow-black/60"
-              : "bg-white/80 border-cyan-200 shadow-cyan-200/50"
+              ? "bg-gray-800/40 border-gray-600/50 shadow-gray-900/50"
+              : "bg-white/80 border-black/10 shadow-black/10"
           }`}
         >
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -85,8 +85,8 @@ export default function Contact() {
                   placeholder="Enter your name"
                   className={`w-full rounded-xl px-4 py-3 outline-hidden border transition-all ${
                     isDarkMode
-                      ? "bg-white/5 border-white/10 text-white focus:border-indigo-500"
-                      : "bg-gray-50 border-cyan-200 text-gray-900 focus:border-indigo-500 focus:bg-white"
+                      ? "bg-white/5 border-white/10 text-white focus:border-white"
+                      : "bg-gray-50 border-black/20 text-black focus:border-black focus:bg-white"
                   }`}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -108,8 +108,8 @@ export default function Contact() {
                   placeholder="Enter your email"
                   className={`w-full rounded-xl px-4 py-3 outline-hidden border transition-all ${
                     isDarkMode
-                      ? "bg-white/5 border-white/10 text-white focus:border-indigo-500"
-                      : "bg-gray-50 border-cyan-200 text-gray-900 focus:border-indigo-500 focus:bg-white"
+                      ? "bg-white/5 border-white/10 text-white focus:border-white"
+                      : "bg-gray-50 border-black/20 text-black focus:border-black focus:bg-white"
                   }`}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -133,8 +133,8 @@ export default function Contact() {
                 placeholder="How can I help you?"
                 className={`w-full rounded-xl px-4 py-3 outline-hidden border transition-all resize-none ${
                   isDarkMode
-                    ? "bg-white/5 border-white/10 text-white focus:border-indigo-500"
-                    : "bg-gray-50 border-cyan-200 text-gray-900 focus:border-indigo-500 focus:bg-white"
+                    ? "bg-white/5 border-white/10 text-white focus:border-white"
+                    : "bg-gray-50 border-black/20 text-black focus:border-black focus:bg-white"
                 }`}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -147,7 +147,11 @@ export default function Contact() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
-              className="w-full cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-indigo-500/20 transition-all"
+              className={`w-full cursor-pointer font-bold py-4 rounded-xl shadow-lg transition-all ${
+                isDarkMode
+                  ? "bg-white text-black hover:bg-gray-200 shadow-white/20"
+                  : "bg-black text-white hover:bg-gray-800 shadow-black/20"
+              }`}
             >
               Send Message
             </motion.button>

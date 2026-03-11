@@ -17,8 +17,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 z-50 w-full backdrop-blur-md transition-all duration-500 border-b ${
         isDarkMode
-          ? "bg-black/40 border-white/10"
-          : "bg-white/60 border-cyan-100 shadow-sm"
+          ? "bg-gray-900/40 border-gray-600/50"
+          : "bg-white/60 border-black/10 shadow-sm"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -27,12 +27,12 @@ export default function Navbar() {
           <div className="flex items-center">
             <span
               className={`text-xl font-bold tracking-tighter transition-colors duration-500 uppercase ${
-                isDarkMode ? "text-white" : "text-cyan-950"
+                isDarkMode ? "text-white" : "text-black"
               }`}
             >
               PORT
               <span
-                className={isDarkMode ? "text-indigo-500" : "text-cyan-500"}
+                className={isDarkMode ? "text-gray-300" : "text-gray-600"}
               >
                 FOLIO
               </span>
@@ -53,10 +53,10 @@ export default function Navbar() {
                     isActive
                       ? isDarkMode
                         ? "bg-white/10 text-white"
-                        : "bg-cyan-500/10 text-cyan-600"
+                        : "bg-black/10 text-black"
                       : isDarkMode
                         ? "text-gray-400 hover:text-white"
-                        : "text-gray-600 hover:text-cyan-500"
+                        : "text-gray-600 hover:text-black"
                   }`
                   }
                 >
@@ -69,14 +69,14 @@ export default function Navbar() {
             <div
               onClick={toggleTheme}
               className={`relative w-14 h-7 rounded-full cursor-pointer transition-colors duration-500 p-1 flex items-center ${
-                isDarkMode ? "bg-gray-800" : "bg-cyan-100"
+                isDarkMode ? "bg-gray-800" : "bg-gray-300"
               }`}
             >
               <div
                 className={`absolute w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center ${
                   isDarkMode
-                    ? "translate-x-7 bg-indigo-500 text-white"
-                    : "translate-x-0 bg-white text-cyan-500"
+                    ? "translate-x-7 bg-white text-black"
+                    : "translate-x-0 bg-white text-black"
                 }`}
               >
                 {isDarkMode ? (
@@ -110,8 +110,8 @@ export default function Navbar() {
               onClick={toggleTheme}
               className={`p-2 rounded-full transition-colors ${
                 isDarkMode
-                  ? "bg-gray-800 text-indigo-400"
-                  : "bg-cyan-100 text-cyan-600"
+                  ? "bg-gray-800 text-white"
+                  : "bg-gray-200 text-black"
               }`}
             >
               {isDarkMode ? "🌙" : "☀️"}
@@ -119,7 +119,7 @@ export default function Navbar() {
             <button
               onClick={() => setOpen(!open)}
               className={`p-2 transition-colors ${
-                isDarkMode ? "text-white" : "text-cyan-900"
+                isDarkMode ? "text-white" : "text-black"
               }`}
             >
               <img
@@ -137,8 +137,8 @@ export default function Navbar() {
         <div
           className={`sm:hidden px-4 pb-6 pt-4 space-y-2 transition-all duration-300 backdrop-blur-2xl border-t ${
             isDarkMode
-              ? "bg-black/90 border-white/5"
-              : "bg-white/95 border-cyan-100"
+              ? "bg-gray-900/90 border-gray-600/50"
+              : "bg-white/95 border-black/10"
           }`}
         >
           {navItems.map((item) => (
@@ -152,11 +152,11 @@ export default function Navbar() {
                 ${
                   isActive
                     ? isDarkMode
-                      ? "bg-indigo-500/20 text-indigo-400 border border-indigo-500/30"
-                      : "bg-cyan-500/10 text-cyan-600 border border-cyan-500/20"
+                      ? "bg-white/20 text-white border border-white/30"
+                      : "bg-black/10 text-black border border-black/20"
                     : isDarkMode
                       ? "text-gray-400 hover:text-white"
-                      : "text-gray-700 hover:text-cyan-600"
+                      : "text-gray-700 hover:text-black"
                 }
               `}
             >

@@ -10,16 +10,16 @@ export default function SkillCard({ name, iconPath }) {
         y: -8,
         scale: 1.05,
         boxShadow: isDarkMode
-          ? "0 20px 25px -5px rgba(99, 102, 241, 0.2)" // Indigo glow
-          : "0 20px 25px -5px rgba(6, 182, 212, 0.2)", // Aqua glow
+          ? "0 20px 25px -5px rgba(255, 255, 255, 0.2)"
+          : "0 20px 25px -5px rgba(0, 0, 0, 0.2)",
       }}
       className={`
         flex flex-col items-center justify-center p-6 
         backdrop-blur-md rounded-2xl border transition-all duration-500
         ${
           isDarkMode
-            ? "bg-gray-900/40 border-white/5 hover:border-indigo-500/50"
-            : "bg-white/80 border-cyan-200 shadow-sm hover:border-cyan-400"
+            ? "bg-gray-800/40 border-gray-600/50 hover:border-white/50"
+            : "bg-white/80 border-black/10 shadow-sm hover:border-black/50"
         }
       `}
     >
@@ -29,7 +29,7 @@ export default function SkillCard({ name, iconPath }) {
         ${
           isDarkMode
             ? "bg-white/5 group-hover:bg-white/10"
-            : "bg-cyan-50 shadow-inner shadow-cyan-100/50"
+            : "bg-black/5 shadow-inner shadow-black/10"
         }
       `}
       >
@@ -45,7 +45,7 @@ export default function SkillCard({ name, iconPath }) {
       <span
         className={`
         font-semibold text-sm text-center tracking-wide transition-colors duration-500
-        ${isDarkMode ? "text-gray-300" : "text-cyan-900"}
+        ${isDarkMode ? "text-gray-300" : "text-black"}
       `}
       >
         {name}
