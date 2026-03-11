@@ -39,12 +39,3 @@ A fully responsive, modern portfolio website built using **React and Vite**, fea
 ## 📂 Project Structure
 
 ---
-
-If you want, I can now generate:
-
-- 🔥 A premium styled README with badges
-- 📊 GitHub stats integration
-- 🎨 Custom banner header
-- 🧠 Professional “About Me” section for recruiters
-
-Just tell me 🚀
