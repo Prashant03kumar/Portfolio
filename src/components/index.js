@@ -4,6 +4,7 @@ import Intro from "./Intro";
 import Skills from "./Skills";
 import Platforms from "./Platforms";
 import Projects from "./Projects";
+import Certificates from "./Certificates";
 import Footer from "./Footer";
 // import Contact from "./Contact";
 
@@ -15,6 +16,7 @@ export {
   Skills,
   Platforms,
   Projects,
+  Certificates,
   Footer,
   ScrollToSection,
 };

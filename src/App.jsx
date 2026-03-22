@@ -8,6 +8,7 @@ import {
   Skills,
   Platforms,
   Projects,
+  Certificates,
   Footer,
   ScrollToSection,
 } from "./components/index.js";
@@ -37,6 +38,7 @@ function App() {
         <Skills />
         <Platforms />
         <Projects />
+        <Certificates />
       </main>
 
       <Footer />
