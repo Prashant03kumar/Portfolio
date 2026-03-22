@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 // Import your project images
-import movieImg from "../assets/movie-system.png";
-import trieImg from "../assets/auto-complete.png";
-import algoImg from "../assets/visualizer.jpg";
+import forgeImg from "../assets/forge.webp";
+import spamImg from "../assets/spam.png";
+import cpuImg from "../assets/cpu.png";
 // Import github icon
 import githubIcon from "../assets/git.svg";
 
@@ -12,28 +12,28 @@ export default function Projects() {
 
   const projectList = [
     {
-      title: "Movie Recommendation System",
+      title: "Forge: Productivity Social Ecosystem",
       description:
-        "Personalized ML system using TF-IDF and Cosine Similarity for high-accuracy suggestions via Streamlit.",
-      image: movieImg,
-      link: "https://github.com/Jatinkumar2519/Movie-Recommender-System-",
-      tags: ["Python", "ML", "Pandas"],
+        "A productivity-focused social ecosystem designed to help users build and maintain consistency through habit tracking and community accountability.",
+      image: forgeImg,
+      link: "https://github.com/Prashant03kumar/FORGE-",
+      tags: ["React", "Vite", "JavaScript", "Node.js"],
     },
     {
-      title: "Search Auto-Complete System",
+      title: "PhishGuard: Phishing URL Detector",
       description:
-        "High-performance Trie-based engine reducing lookup time by 35% for optimized real-time search suggestions.",
-      image: trieImg,
-      link: "https://github.com/Jatinkumar2519/Search-AutoComplete-System",
-      tags: ["C++", "Trie", "Data Structures"],
+        "Machine Learning-based phishing website detection system analyzing 42 handcrafted features to classify sites with ~97% accuracy.",
+      image: spamImg,
+      link: "https://github.com/Prashant03kumar/PhishGuard-ML-Based-Phishing-URL-Detector",
+      tags: ["Python", "FastAPI", "Random Forest", "Tailwind CSS"],
     },
     {
-      title: "AlgoVisualizer",
+      title: "Intelligent CPU Scheduler Simulator",
       description:
-        "Interactive React application using Konva to visualize complex algorithms for better conceptual learning.",
-      image: algoImg,
-      link: "https://github.com/Jatinkumar2519/AlgoVisualizer",
-      tags: ["React", "Konva", "Algorithms"],
+        "A PyQt5-based application to simulate CPU scheduling algorithms (FCFS, SJF, RR, Priority) with real-time Gantt charts and metrics.",
+      image: cpuImg,
+      link: "https://github.com/Prashant03kumar/Intelligent-CPU-Scheduler-Simulator",
+      tags: ["Python", "PyQt5", "Algorithms", "Simulation"],
     },
   ];
 
@@ -41,9 +41,8 @@ export default function Projects() {
     <section id="projects" className="py-25 px-6">
       <div className="mx-auto max-w-6xl">
         <h2
-          className={`text-3xl font-bold mb-12 text-center transition-colors duration-500 ${
-            isDarkMode ? "text-white" : "text-black"
-          }`}
+          className={`text-3xl font-bold mb-12 text-center transition-colors duration-500 ${isDarkMode ? "text-white" : "text-black"
+            }`}
         >
           Featured{" "}
           <span className={isDarkMode ? "text-white" : "text-black"}>
@@ -56,11 +55,10 @@ export default function Projects() {
             <motion.div
               key={index}
               whileHover={{ y: -10 }}
-              className={`backdrop-blur-md rounded-2xl border overflow-hidden flex flex-col transition-all duration-500 shadow-xl ${
-                isDarkMode
-                  ? "bg-gray-800/40 border-gray-600/50 shadow-gray-900/50"
-                  : "bg-white/80 border-black/10 shadow-black/10"
-              }`}
+              className={`backdrop-blur-md rounded-2xl border overflow-hidden flex flex-col transition-all duration-500 shadow-xl ${isDarkMode
+                ? "bg-gray-800/40 border-gray-600/50 shadow-gray-900/50"
+                : "bg-white/80 border-black/10 shadow-black/10"
+                }`}
             >
               {/* Project Image */}
               <div className="relative h-48 w-full overflow-hidden">
@@ -75,29 +73,26 @@ export default function Projects() {
               <div className="p-6 flex flex-col grow">
                 <div className="flex justify-between items-start mb-2">
                   <h3
-                    className={`text-xl font-bold leading-tight transition-colors duration-500 ${
-                      isDarkMode ? "text-white" : "text-black"
-                    }`}
+                    className={`text-xl font-bold leading-tight transition-colors duration-500 ${isDarkMode ? "text-white" : "text-black"
+                      }`}
                   >
                     {project.title}
                   </h3>
                   <a href={project.link} target="_blank" rel="noreferrer">
                     <img
                       src={githubIcon}
-                      className={`w-5 h-5 transition-all duration-500 ${
-                        isDarkMode
-                          ? "invert opacity-70 hover:opacity-100"
-                          : "brightness-0 opacity-60 hover:opacity-100"
-                      }`}
+                      className={`w-5 h-5 transition-all duration-500 ${isDarkMode
+                        ? "invert opacity-70 hover:opacity-100"
+                        : "brightness-0 opacity-60 hover:opacity-100"
+                        }`}
                       alt="github"
                     />
                   </a>
                 </div>
 
                 <p
-                  className={`italic text-sm mb-4 leading-relaxed transition-colors duration-500 ${
-                    isDarkMode ? "text-gray-400" : "text-gray-600"
-                  }`}
+                  className={`italic text-sm mb-4 leading-relaxed transition-colors duration-500 ${isDarkMode ? "text-gray-400" : "text-gray-600"
+                    }`}
                 >
                   {project.description}
                 </p>
@@ -107,11 +102,10 @@ export default function Projects() {
                   {project.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className={`text-[10px] uppercase tracking-wider px-2 py-1 rounded-md border transition-all duration-500 ${
-                        isDarkMode
-                          ? "bg-white/10 text-white border-white/20"
-                          : "bg-black/10 text-black border-black/20"
-                      }`}
+                      className={`text-[10px] uppercase tracking-wider px-2 py-1 rounded-md border transition-all duration-500 ${isDarkMode
+                        ? "bg-white/10 text-white border-white/20"
+                        : "bg-black/10 text-black border-black/20"
+                        }`}
                     >
                       {tag}
                     </span>
