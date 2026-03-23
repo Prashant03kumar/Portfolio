@@ -16,14 +16,6 @@ const blinkingStars = [...Array(40)].map((_, i) => {
   };
 });
 
-const shootingStars = [...Array(4)].map((_, i) => ({
-  id: i,
-  top: Math.random() * 40,
-  left: Math.random() * 60,
-  delay: Math.random() * 4,
-  duration: Math.random() * 1.5 + 1.5,
-}));
-
 export default function Hero() {
   const { isDarkMode } = useTheme();
 
@@ -59,46 +51,9 @@ export default function Hero() {
               backgroundRepeat: 'repeat'
             }}
           />
-          {/* Realistic Full Moon with Subtle Craters */}
-          <div 
-            className="absolute top-[10%] right-[10%] sm:right-[20%] w-20 h-20 md:w-24 md:h-24 rounded-full opacity-95 shadow-[0_0_40px_rgba(255,255,255,0.4),0_0_10px_rgba(255,255,255,0.5),inset_-8px_-8px_16px_rgba(0,0,0,0.5)]"
-            style={{
-              backgroundColor: '#e5e7eb', // gray-200
-              backgroundImage: `
-                radial-gradient(circle at 30% 30%, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.08) 12%, transparent 18%),
-                radial-gradient(circle at 65% 55%, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.12) 15%, transparent 22%),
-                radial-gradient(circle at 45% 75%, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 10%, transparent 15%)
-              `
-            }}
-          />
-          
           {/* Planets */}
           <div className="absolute top-[35%] left-[10%] w-6 h-6 rounded-full bg-[radial-gradient(circle_at_30%_30%,#93c5fd,#1e3a8a)] shadow-[0_0_15px_#3b82f6] opacity-80" />
           <div className="absolute top-[60%] right-[30%] w-3 h-3 rounded-full bg-[radial-gradient(circle_at_30%_30%,#fca5a5,#7f1d1d)] shadow-[0_0_10px_#ef4444] opacity-70" />
-
-          {/* Shooting/Broken stars matching exactly their rotated path */}
-          {shootingStars.map((star) => (
-            <div
-              key={`shoot-${star.id}`}
-              className="absolute pointer-events-none transform rotate-45"
-              style={{ top: `${star.top}%`, left: `${star.left}%` }}
-            >
-              <motion.div 
-                className="w-32 md:w-48 h-[2px] bg-gradient-to-r from-transparent via-white/80 to-white rounded-full"
-                animate={{ 
-                  x: ["-10vw", "120vw"], 
-                  opacity: [0, 1, 1, 0] 
-                }}
-                transition={{ 
-                  duration: star.duration, 
-                  repeat: Infinity, 
-                  ease: "linear", 
-                  repeatDelay: 2,
-                  delay: star.delay
-                }}
-              />
-            </div>
-          ))}
 
           {/* 40 Random Blinking Stars */}
           {blinkingStars.map((star) => (
