@@ -26,15 +26,17 @@ export default function Hero() {
     >
       {/* Night Sky Elements for Dark Mode */}
       {isDarkMode && (
-        <div 
+        <div
           className="absolute inset-0 pointer-events-none z-0"
           style={{
-            maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)'
+            maskImage:
+              "linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
           }}
         >
           {/* Main starry background using radial gradients for different sized stars */}
-          <div 
+          <div
             className="absolute inset-0 opacity-80"
             style={{
               backgroundImage: `
@@ -47,8 +49,8 @@ export default function Hero() {
                 radial-gradient(1.5px 1.5px at 20% 80%, rgba(255,255,255,0.7), rgba(0,0,0,0)),
                 radial-gradient(2px 2px at 45% 75%, white, rgba(0,0,0,0))
               `,
-              backgroundSize: '200px 200px',
-              backgroundRepeat: 'repeat'
+              backgroundSize: "200px 200px",
+              backgroundRepeat: "repeat",
             }}
           />
           {/* Planets */}
@@ -65,15 +67,17 @@ export default function Hero() {
                 height: star.size,
                 top: `${star.top}%`,
                 left: `${star.left}%`,
-                boxShadow: star.isLarge ? "0 0 12px 2px rgba(255, 255, 255, 0.8)" : "0 0 8px 1px rgba(255, 255, 255, 0.4)",
+                boxShadow: star.isLarge
+                  ? "0 0 12px 2px rgba(255, 255, 255, 0.8)"
+                  : "0 0 8px 1px rgba(255, 255, 255, 0.4)",
               }}
               initial={{ opacity: 0.1 }}
               animate={{ opacity: [0.1, 1, 0.1] }}
-              transition={{ 
-                duration: star.duration, 
-                repeat: Infinity, 
-                delay: star.delay, 
-                ease: "easeInOut" 
+              transition={{
+                duration: star.duration,
+                repeat: Infinity,
+                delay: star.delay,
+                ease: "easeInOut",
               }}
             />
           ))}
@@ -150,8 +154,8 @@ export default function Hero() {
 
           {/* Secondary Button: Download CV */}
           <a
-            href="/jatin_resume.pdf"
-            download="Jatin_Resume.pdf"
+            href="/Prashant_resume.pdf"
+            download="Prashant_resume.pdf"
             className={`flex items-center gap-2 px-8 py-3.5 border-2 font-bold rounded-full transition-all active:scale-95 hover:-translate-y-1 ${
               isDarkMode
                 ? "border-gray-500 text-gray-300 hover:bg-white/10 hover:border-white hover:text-white"
