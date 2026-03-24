@@ -18,8 +18,8 @@ export default function SkillCard({ name, iconPath }) {
         backdrop-blur-md rounded-2xl border transition-all duration-500
         ${
           isDarkMode
-            ? "bg-gray-800/40 border-gray-600/50 hover:border-white/50"
-            : "bg-white/80 border-black/10 shadow-sm hover:border-black/50"
+            ? "bg-gray-800/40 border-gray-600/50 hover:border-indigo-500 hover:shadow-indigo-500/20"
+            : "bg-white/80 border-black/10 shadow-sm hover:border-cyan-500 hover:shadow-cyan-500/20"
         }
       `}
     >
@@ -33,13 +33,19 @@ export default function SkillCard({ name, iconPath }) {
         }
       `}
       >
-        <img
-          src={iconPath}
-          alt={name}
-          className={`w-10 h-10 object-contain transition-all duration-500 ${
-            !isDarkMode ? "contrast-[1.1] brightness-[0.9]" : ""
-          }`}
-        />
+        {typeof iconPath === 'string' ? (
+          <img
+            src={iconPath}
+            alt={name}
+            className={`w-10 h-10 object-contain transition-all duration-500 ${
+              !isDarkMode ? "contrast-[1.1] brightness-[0.9]" : ""
+            }`}
+          />
+        ) : (
+          <div className={`w-10 h-10 flex items-center justify-center ${isDarkMode ? "text-indigo-400" : "text-cyan-500"}`}>
+            {iconPath}
+          </div>
+        )}
       </div>
 
       <span

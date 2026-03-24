@@ -53,8 +53,8 @@ export default function Intro() {
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           className={`absolute -top-10 md:-top-20 right-[10%] w-48 h-48 md:w-72 md:h-72 rounded-full z-0 ${
             isDarkMode
-              ? "bg-[radial-gradient(circle_at_30%_30%,_#e5e7eb_0%,_#374151_50%,_#000000_90%)] shadow-[0_0_30px_rgba(255,255,255,0.15)]"
-              : "bg-[radial-gradient(circle_at_30%_30%,_#ffffff_20%,_#d1d5db_60%,_#6b7280_100%)] shadow-[0_15px_30px_rgba(0,0,0,0.3)]"
+              ? "bg-[radial-gradient(circle_at_30%_30%,_#818cf8_0%,_#4f46e5_50%,_#1e1b4b_90%)] shadow-[0_0_30px_rgba(99,102,241,0.3)]"
+              : "bg-[radial-gradient(circle_at_30%_30%,_#cffafe_20%,_#06b6d4_60%,_#164e63_100%)] shadow-[0_15px_30px_rgba(6,182,212,0.3)]"
           }`}
         />
 
@@ -64,8 +64,8 @@ export default function Intro() {
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           className={`absolute -bottom-4 md:-bottom-8 left-[25%] w-32 h-32 md:w-48 md:h-48 rounded-full z-0 ${
             isDarkMode
-              ? "bg-[radial-gradient(circle_at_30%_30%,_#d1d5db_0%,_#1f2937_60%,_#000000_90%)] shadow-[0_0_20px_rgba(255,255,255,0.15)]"
-              : "bg-[radial-gradient(circle_at_30%_30%,_#ffffff_30%,_#d1d5db_70%,_#4b5563_100%)] shadow-[0_10px_20px_rgba(0,0,0,0.25)]"
+              ? "bg-[radial-gradient(circle_at_30%_30%,_#6366f1_0%,_#3730a3_60%,_#0f172a_90%)] shadow-[0_0_20px_rgba(99,102,241,0.25)]"
+              : "bg-[radial-gradient(circle_at_30%_30%,_#a5f3fc_30%,_#0891b2_70%,_#0b3f54_100%)] shadow-[0_10px_20px_rgba(6,182,212,0.25)]"
           }`}
         />
 
@@ -99,7 +99,7 @@ export default function Intro() {
 
             <h2
               className={`text-3xl sm:text-5xl font-bold mt-2 min-h-15 transition-colors duration-500 ${
-                isDarkMode ? "text-white" : "text-black"
+                isDarkMode ? "text-indigo-400" : "text-cyan-500"
               }`}
             >
               {text}
@@ -119,7 +119,7 @@ export default function Intro() {
                 I am a{" "}
                 <strong
                   className={
-                    isDarkMode ? "text-white" : "text-black font-bold"
+                    isDarkMode ? "text-indigo-400" : "text-cyan-600 font-bold"
                   }
                 >
                   CSE (AI-ML)
@@ -127,7 +127,7 @@ export default function Intro() {
                 student who codes to solve{" "}
                 <strong
                   className={
-                    isDarkMode ? "text-gray-400" : "text-black font-bold"
+                    isDarkMode ? "text-indigo-400" : "text-cyan-600 font-bold"
                   }
                 >
                   real-world problems
@@ -143,8 +143,8 @@ export default function Intro() {
                 <strong
                   className={
                     isDarkMode
-                      ? "text-white font-medium"
-                      : "text-black font-bold"
+                      ? "text-indigo-400 font-medium"
+                      : "text-cyan-600 font-bold"
                   }
                 >
                   LeetCode Rating of 1577
@@ -152,7 +152,7 @@ export default function Intro() {
                 , I have mastered logic and data structures by solving
                 <strong
                   className={
-                    isDarkMode ? "text-gray-400" : "text-black font-bold"
+                    isDarkMode ? "text-indigo-400" : "text-cyan-600 font-bold"
                   }
                 >
                   {" "}
@@ -167,8 +167,8 @@ export default function Intro() {
                 <strong
                   className={
                     isDarkMode
-                      ? "text-white font-medium"
-                      : "text-black font-bold"
+                      ? "text-indigo-400 font-medium"
+                      : "text-cyan-600 font-bold"
                   }
                 >
                   Full-Stack Development
@@ -177,8 +177,8 @@ export default function Intro() {
                 <strong
                   className={
                     isDarkMode
-                      ? "text-white font-medium"
-                      : "text-black font-bold"
+                      ? "text-indigo-400 font-medium"
+                      : "text-cyan-600 font-bold"
                   }
                 >
                   AI-ML
@@ -226,8 +226,8 @@ export default function Intro() {
            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
            className={`absolute top-1/2 -translate-y-1/2 -left-16 md:-left-32 w-24 h-24 md:w-44 md:h-44 rounded-full z-20 pointer-events-none ${
              isDarkMode
-               ? "bg-[radial-gradient(circle_at_30%_30%,_#f3f4f6_0%,_#4b5563_50%,_#000000_100%)] shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-               : "bg-[radial-gradient(circle_at_30%_30%,_#ffffff_20%,_#d1d5db_60%,_#4b5563_100%)] shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+               ? "bg-[radial-gradient(circle_at_30%_30%,_#a5b4fc_0%,_#4338ca_50%,_#1e1b4b_100%)] shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+               : "bg-[radial-gradient(circle_at_30%_30%,_#ecfeff_20%,_#22d3ee_60%,_#083344_100%)] shadow-[0_10px_30px_rgba(6,182,212,0.3)]"
            }`}
         />
 

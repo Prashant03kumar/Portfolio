@@ -45,7 +45,7 @@ export default function Projects() {
             }`}
         >
           Featured{" "}
-          <span className={isDarkMode ? "text-white" : "text-black"}>
+          <span className={isDarkMode ? "text-indigo-400" : "text-cyan-500"}>
             Projects
           </span>
         </h2>
@@ -54,10 +54,14 @@ export default function Projects() {
           {projectList.map((project, index) => (
             <motion.div
               key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
               whileHover={{ y: -10 }}
               className={`backdrop-blur-md rounded-2xl border overflow-hidden flex flex-col transition-all duration-500 shadow-xl ${isDarkMode
-                ? "bg-gray-800/40 border-gray-600/50 shadow-gray-900/50"
-                : "bg-white/80 border-black/10 shadow-black/10"
+                ? "bg-gray-800/40 border-gray-600/50 hover:border-indigo-500 hover:shadow-indigo-500/20 shadow-gray-900/50"
+                : "bg-white/80 border-black/10 hover:border-cyan-500 hover:shadow-cyan-500/20 shadow-black/10"
                 }`}
             >
               {/* Project Image */}
@@ -102,9 +106,9 @@ export default function Projects() {
                   {project.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className={`text-[10px] uppercase tracking-wider px-2 py-1 rounded-md border transition-all duration-500 ${isDarkMode
-                        ? "bg-white/10 text-white border-white/20"
-                        : "bg-black/10 text-black border-black/20"
+                      className={`text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-md border transition-all duration-500 font-semibold ${isDarkMode
+                        ? "bg-indigo-500/10 text-indigo-300 border-indigo-500/20"
+                        : "bg-cyan-50 text-cyan-700 border-cyan-200"
                         }`}
                     >
                       {tag}

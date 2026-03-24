@@ -54,7 +54,7 @@ export default function Platforms() {
               }`}
           >
             Coding{" "}
-            <span className={isDarkMode ? "text-white" : "text-black"}>
+            <span className={isDarkMode ? "text-indigo-400" : "text-cyan-500"}>
               Profiles
             </span>
           </h2>

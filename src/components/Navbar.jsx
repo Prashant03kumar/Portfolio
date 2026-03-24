@@ -32,7 +32,7 @@ export default function Navbar() {
             >
               PORT
               <span
-                className={isDarkMode ? "text-gray-300" : "text-gray-600"}
+                className={isDarkMode ? "text-indigo-400" : "text-cyan-600"}
               >
                 FOLIO
               </span>
@@ -55,8 +55,8 @@ export default function Navbar() {
                         ? "bg-white/10 text-white"
                         : "bg-black/10 text-black"
                       : isDarkMode
-                        ? "text-gray-400 hover:text-white"
-                        : "text-gray-600 hover:text-black"
+                        ? "text-gray-400 hover:text-indigo-400"
+                        : "text-gray-600 hover:text-cyan-500"
                   }`
                   }
                 >
@@ -69,14 +69,14 @@ export default function Navbar() {
             <div
               onClick={toggleTheme}
               className={`relative w-14 h-7 rounded-full cursor-pointer transition-colors duration-500 p-1 flex items-center ${
-                isDarkMode ? "bg-gray-800" : "bg-gray-300"
+                isDarkMode ? "bg-gray-800" : "bg-cyan-100"
               }`}
             >
               <div
                 className={`absolute w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center ${
                   isDarkMode
-                    ? "translate-x-7 bg-white text-black"
-                    : "translate-x-0 bg-white text-black"
+                    ? "translate-x-7 bg-indigo-500 text-white"
+                    : "translate-x-0 bg-cyan-500 text-white"
                 }`}
               >
                 {isDarkMode ? (

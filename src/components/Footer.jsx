@@ -20,7 +20,7 @@ export default function Footer() {
               }`}
           >
             © {new Date().getFullYear()}{" "}
-            <span className={isDarkMode ? "text-white" : "text-black"}>
+            <span className={isDarkMode ? "text-indigo-400" : "text-cyan-500"}>
               Prashant Kumar.
             </span>{" "}
             All rights reserved.

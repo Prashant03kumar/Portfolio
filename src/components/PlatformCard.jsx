@@ -20,8 +20,8 @@ export default function PlatformCard({ name, icon, link }) {
         flex items-center gap-4 p-4 backdrop-blur-md rounded-xl border transition-all duration-500 group
         ${
           isDarkMode
-            ? "bg-gray-800/40 border-gray-600/50 hover:border-white/50"
-            : "bg-white/70 border-black/10 shadow-lg shadow-black/10 hover:border-black/50"
+            ? "bg-gray-800/40 border-gray-600/50 hover:border-indigo-500 hover:shadow-indigo-500/20"
+            : "bg-white/70 border-black/10 shadow-lg shadow-black/10 hover:border-cyan-500 hover:shadow-cyan-500/20"
         }
       `}
     >
@@ -49,7 +49,7 @@ export default function PlatformCard({ name, icon, link }) {
         </h4>
         <span
           className={`text-xs font-medium transition-all group-hover:translate-x-1 ${
-            isDarkMode ? "text-gray-300" : "text-gray-700"
+            isDarkMode ? "text-gray-400 group-hover:text-indigo-400" : "text-gray-600 group-hover:text-cyan-600"
           }`}
         >
           View Profile →

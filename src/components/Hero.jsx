@@ -2,20 +2,6 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom"; // Import NavLink
 import { useTheme } from "../context/ThemeContext";
 
-const blinkingStars = [...Array(40)].map((_, i) => {
-  const isLarge = i < 5;
-  const size = isLarge ? Math.random() * 3 + 3 : Math.random() * 2 + 1;
-  return {
-    id: i,
-    size,
-    isLarge,
-    top: Math.random() * 100,
-    left: Math.random() * 100,
-    duration: Math.random() * 2 + 1,
-    delay: Math.random() * 4,
-  };
-});
-
 export default function Hero() {
   const { isDarkMode } = useTheme();
 
@@ -24,65 +10,7 @@ export default function Hero() {
       id="home"
       className="relative pt-16 min-h-screen flex items-center overflow-hidden"
     >
-      {/* Night Sky Elements for Dark Mode */}
-      {isDarkMode && (
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            maskImage:
-              "linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
-          }}
-        >
-          {/* Main starry background using radial gradients for different sized stars */}
-          <div
-            className="absolute inset-0 opacity-80"
-            style={{
-              backgroundImage: `
-                radial-gradient(1.5px 1.5px at 15% 20%, white, rgba(0,0,0,0)),
-                radial-gradient(2.5px 2.5px at 30% 10%, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-                radial-gradient(1px 1px at 50% 50%, white, rgba(0,0,0,0)),
-                radial-gradient(2.5px 2.5px at 70% 30%, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-                radial-gradient(1px 1px at 90% 15%, #d1d5db, rgba(0,0,0,0)),
-                radial-gradient(3px 3px at 85% 65%, white, rgba(0,0,0,0)),
-                radial-gradient(1.5px 1.5px at 20% 80%, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 45% 75%, white, rgba(0,0,0,0))
-              `,
-              backgroundSize: "200px 200px",
-              backgroundRepeat: "repeat",
-            }}
-          />
-          {/* Planets */}
-          <div className="absolute top-[35%] left-[10%] w-6 h-6 rounded-full bg-[radial-gradient(circle_at_30%_30%,#93c5fd,#1e3a8a)] shadow-[0_0_15px_#3b82f6] opacity-80" />
-          <div className="absolute top-[60%] right-[30%] w-3 h-3 rounded-full bg-[radial-gradient(circle_at_30%_30%,#fca5a5,#7f1d1d)] shadow-[0_0_10px_#ef4444] opacity-70" />
 
-          {/* 40 Random Blinking Stars */}
-          {blinkingStars.map((star) => (
-            <motion.div
-              key={star.id}
-              className="absolute rounded-full bg-white z-0"
-              style={{
-                width: star.size,
-                height: star.size,
-                top: `${star.top}%`,
-                left: `${star.left}%`,
-                boxShadow: star.isLarge
-                  ? "0 0 12px 2px rgba(255, 255, 255, 0.8)"
-                  : "0 0 8px 1px rgba(255, 255, 255, 0.4)",
-              }}
-              initial={{ opacity: 0.1 }}
-              animate={{ opacity: [0.1, 1, 0.1] }}
-              transition={{
-                duration: star.duration,
-                repeat: Infinity,
-                delay: star.delay,
-                ease: "easeInOut",
-              }}
-            />
-          ))}
-        </div>
-      )}
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
         <motion.h1
@@ -97,7 +25,7 @@ export default function Hero() {
           Hi, I’m{" "}
           <span
             className={`text-5xl sm:text-8xl transition-colors duration-500 ${
-              isDarkMode ? "text-white" : "text-black"
+              isDarkMode ? "text-indigo-500" : "text-cyan-500"
             }`}
           >
             PRASHANT
@@ -140,14 +68,14 @@ export default function Hero() {
             to="/contact" // Update this to match your routing (/contact or /#contact)
             className={`flex items-center gap-2 px-8 py-3.5 font-bold rounded-full transition-all shadow-xl active:scale-95 hover:-translate-y-1 ${
               isDarkMode
-                ? "bg-white text-black hover:bg-gray-200 shadow-white/20"
-                : "bg-black text-white hover:bg-gray-800 shadow-black/20"
+                ? "bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-600/30"
+                : "bg-cyan-500 text-white hover:bg-cyan-600 shadow-cyan-500/30"
             }`}
           >
             <img
               src="/icons/connect.svg"
               alt="connect"
-              className={`w-5 h-5 ${isDarkMode ? "invert-0" : "invert"}`}
+              className={`w-5 h-5 transition-all ${isDarkMode ? "invert-0 brightness-200" : "invert-0 brightness-200"}`}
             />
             Connect
           </NavLink>
@@ -158,8 +86,8 @@ export default function Hero() {
             download="Prashant_resume.pdf"
             className={`flex items-center gap-2 px-8 py-3.5 border-2 font-bold rounded-full transition-all active:scale-95 hover:-translate-y-1 ${
               isDarkMode
-                ? "border-gray-500 text-gray-300 hover:bg-white/10 hover:border-white hover:text-white"
-                : "border-gray-400 text-gray-700 hover:bg-black/5 hover:border-black hover:text-black"
+                ? "border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 hover:border-indigo-400 hover:text-indigo-300"
+                : "border-cyan-400 text-cyan-600 hover:bg-cyan-50 hover:border-cyan-500 hover:text-cyan-700"
             }`}
           >
             <img

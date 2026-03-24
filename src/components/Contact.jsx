@@ -36,8 +36,8 @@ export default function Contact() {
 
   // Dynamic Background Gradient
   const bgGradient = isDarkMode
-    ? "from-black from-[70%] via-gray-600 via-[90%] to-white to-[100%]"
-    : "from-white from-[70%] via-gray-400 via-[90%] to-black to-[100%]";
+    ? "from-[#0B1120] from-[70%] via-gray-900 via-[90%] to-indigo-950 to-[100%]"
+    : "from-white from-[70%] via-cyan-50 via-[90%] to-cyan-200 to-[100%]";
 
   return (
     <section
@@ -50,7 +50,7 @@ export default function Contact() {
           <h2
             className={`text-3xl font-bold transition-colors duration-500 ${isDarkMode ? "text-white" : "text-black"}`}
           >
-            Get In <span className={isDarkMode ? "text-white" : "text-black"}>Touch</span>
+            Get In <span className={isDarkMode ? "text-indigo-400" : "text-cyan-500"}>Touch</span>
           </h2>
           <p
             className={`mt-2 italic text-sm transition-colors duration-500 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}
@@ -85,8 +85,8 @@ export default function Contact() {
                   placeholder="Enter your name"
                   className={`w-full rounded-xl px-4 py-3 outline-hidden border transition-all ${
                     isDarkMode
-                      ? "bg-white/5 border-white/10 text-white focus:border-white"
-                      : "bg-gray-50 border-black/20 text-black focus:border-black focus:bg-white"
+                      ? "bg-white/5 border-white/10 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                      : "bg-gray-50 border-black/20 text-black focus:border-cyan-500 focus:bg-white focus:ring-1 focus:ring-cyan-500"
                   }`}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -108,8 +108,8 @@ export default function Contact() {
                   placeholder="Enter your email"
                   className={`w-full rounded-xl px-4 py-3 outline-hidden border transition-all ${
                     isDarkMode
-                      ? "bg-white/5 border-white/10 text-white focus:border-white"
-                      : "bg-gray-50 border-black/20 text-black focus:border-black focus:bg-white"
+                      ? "bg-white/5 border-white/10 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                      : "bg-gray-50 border-black/20 text-black focus:border-cyan-500 focus:bg-white focus:ring-1 focus:ring-cyan-500"
                   }`}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -133,8 +133,8 @@ export default function Contact() {
                 placeholder="How can I help you?"
                 className={`w-full rounded-xl px-4 py-3 outline-hidden border transition-all resize-none ${
                   isDarkMode
-                    ? "bg-white/5 border-white/10 text-white focus:border-white"
-                    : "bg-gray-50 border-black/20 text-black focus:border-black focus:bg-white"
+                    ? "bg-white/5 border-white/10 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    : "bg-gray-50 border-black/20 text-black focus:border-cyan-500 focus:bg-white focus:ring-1 focus:ring-cyan-500"
                 }`}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -149,8 +149,8 @@ export default function Contact() {
               type="submit"
               className={`w-full cursor-pointer font-bold py-4 rounded-xl shadow-lg transition-all ${
                 isDarkMode
-                  ? "bg-white text-black hover:bg-gray-200 shadow-white/20"
-                  : "bg-black text-white hover:bg-gray-800 shadow-black/20"
+                  ? "bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-600/30"
+                  : "bg-cyan-500 text-white hover:bg-cyan-600 shadow-cyan-500/30"
               }`}
             >
               Send Message

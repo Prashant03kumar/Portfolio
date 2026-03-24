@@ -57,12 +57,12 @@ export default function Education() {
           }`}
         >
           My{" "}
-          <span className={isDarkMode ? "text-indigo-400" : "text-indigo-600"}>
+          <span className={isDarkMode ? "text-indigo-400" : "text-cyan-500"}>
             Education
           </span>
         </h2>
 
-        <div className="relative border-l-2 ml-4 md:ml-0 md:border-l-0 md:before:absolute md:before:left-1/2 md:before:-ml-px md:before:top-0 md:before:h-full md:before:w-[2px] md:before:bg-gradient-to-b before:from-indigo-500 before:to-purple-500 border-indigo-500">
+        <div className={`relative border-l-[2px] ml-4 md:ml-0 md:border-l-0 md:before:absolute md:before:left-1/2 md:before:-ml-px md:before:top-0 md:before:h-full md:before:w-[2px] transition-colors duration-500 ${isDarkMode ? "border-indigo-500/30 md:before:bg-indigo-500/30" : "border-cyan-300 md:before:bg-cyan-300"}`}>
           {educationData.map((item, index) => (
             <motion.div
               key={index}
@@ -76,20 +76,20 @@ export default function Education() {
             >
               {/* Timeline marker */}
               <div
-                className={`absolute w-6 h-6 rounded-full -left-[13px] md:left-1/2 md:-ml-3 flex items-center justify-center bg-indigo-500 border-4 z-10 transition-colors duration-500 ${
-                  isDarkMode ? "border-gray-900" : "border-gray-100"
+                className={`absolute w-6 h-6 rounded-full -left-[13px] md:left-1/2 md:-ml-3 flex items-center justify-center border-4 z-10 transition-colors duration-500 ${
+                  isDarkMode ? "bg-gray-900 border-indigo-500" : "bg-white border-cyan-500"
                 }`}
               >
-                <div className="w-2 h-2 rounded-full bg-white" />
+                <div className={`w-2 h-2 rounded-full ${isDarkMode ? "bg-indigo-400" : "bg-cyan-500"}`} />
               </div>
 
               {/* Content Card */}
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                className={`w-full md:w-5/12 ml-6 md:ml-0 p-6 rounded-2xl border shadow-lg backdrop-blur-md transition-all duration-500 ${
+                className={`w-full md:w-5/12 ml-6 md:ml-0 p-6 rounded-2xl border shadow-lg backdrop-blur-md transition-all duration-500 hover:-translate-y-2 ${
                   isDarkMode
-                    ? "bg-gray-800/40 border-gray-600/50 shadow-gray-900/50"
-                    : "bg-white/80 border-black/10 shadow-black/10"
+                    ? "bg-gray-800/40 border-gray-600/50 hover:border-indigo-500 hover:shadow-indigo-500/20 shadow-gray-900/50"
+                    : "bg-white/80 border-black/10 hover:border-cyan-500 hover:shadow-cyan-500/20 shadow-black/10"
                 }`}
               >
                 <div className="flex justify-between items-start mb-4">
@@ -104,7 +104,7 @@ export default function Education() {
                     {item.specialization && (
                       <p
                         className={`text-sm font-medium transition-colors duration-500 mt-1 ${
-                          isDarkMode ? "text-indigo-300" : "text-indigo-600"
+                          isDarkMode ? "text-gray-400" : "text-gray-600"
                         }`}
                       >
                         {item.specialization}
@@ -112,8 +112,8 @@ export default function Education() {
                     )}
                   </div>
                   <div
-                    className={`hidden sm:flex items-center justify-center p-2 rounded-lg transition-colors duration-500 ${
-                      isDarkMode ? "bg-indigo-500/20 text-indigo-300" : "bg-indigo-100 text-indigo-600"
+                    className={`hidden sm:flex items-center justify-center p-3 rounded-xl transition-colors duration-500 ${
+                      isDarkMode ? "bg-indigo-500/20 text-indigo-400" : "bg-cyan-100/50 text-cyan-600"
                     }`}
                   >
                     {item.icon}
@@ -152,15 +152,15 @@ export default function Education() {
                     <span
                       className={`inline-block px-3 py-1 text-xs font-bold rounded-full transition-colors duration-500 ${
                         isDarkMode
-                          ? "bg-green-500/20 text-green-300 border border-green-500/30"
-                          : "bg-green-100 text-green-700 border border-green-200"
+                          ? "bg-indigo-500/10 text-indigo-300 border border-indigo-500/20"
+                          : "bg-cyan-50 text-cyan-700 border border-cyan-200"
                       }`}
                     >
                       {item.grade}
                     </span>
                     <span
-                      className={`text-xs font-medium px-3 py-1 rounded-full transition-colors duration-500 ${
-                        isDarkMode ? "bg-gray-700 text-gray-300" : "bg-gray-100 text-gray-600"
+                      className={`text-xs font-medium px-3 py-1 rounded-full border transition-colors duration-500 ${
+                        isDarkMode ? "bg-indigo-500/5 text-indigo-300/80 border-indigo-500/10" : "bg-cyan-50/50 text-cyan-700/80 border-cyan-200/50"
                       }`}
                     >
                       {item.date}
