@@ -1,14 +1,34 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useVelocity, useSpring } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
+import { useRef } from "react";
 // Import your project images
 import forgeImg from "../assets/forge.webp";
 import spamImg from "../assets/spam.png";
 import cpuImg from "../assets/cpu.png";
+import satelliteImg from "../assets/satellite.png";
 // Import github icon
 import githubIcon from "../assets/git.svg";
 
 export default function Projects() {
   const { isDarkMode } = useTheme();
+  
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+
+  // Basic parallax upwards movement
+  const satelliteY = useTransform(scrollYProgress, [0, 1], ["200px", "-500px"]);
+
+  // Calculate global scroll velocity for the fire animation
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, { damping: 50, stiffness: 400 });
+
+  // Map velocity cleanly to scale and opacity limits
+  const fireScale = useTransform(smoothVelocity, [-800, 0, 800], [1.0, 0, 1.0], { clamp: true });
+  const fireOpacity = useTransform(smoothVelocity, [-100, 0, 100], [1, 0, 1], { clamp: true });
 
   const projectList = [
     {
@@ -38,8 +58,31 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-25 px-6">
-      <div className="mx-auto max-w-6xl">
+    <section id="projects" ref={sectionRef} className="py-25 px-6 relative xl:overflow-visible overflow-hidden">
+      {/* Realistic Satellite Engine Parallax Wrap */}
+      <motion.div
+        style={{ y: satelliteY, rotate: -10 }}
+        className={`absolute hidden md:flex flex-col items-center right-4 lg:right-10 top-[10%] w-20 md:w-28 xl:w-36 drop-shadow-2xl z-20 pointer-events-none transition-opacity duration-500 ${isDarkMode ? "opacity-90 drop-shadow-[0_0_25px_rgba(99,102,241,0.6)]" : "opacity-100 contrast-125 drop-shadow-[0_0_20px_rgba(0,0,0,0.5)]"}`}
+      >
+        <img
+          src={satelliteImg}
+          alt="Real Satellite"
+          className="w-full relative z-10"
+        />
+
+        {/* Outer Engine Exhaust flame */}
+        <motion.div
+           style={{ scaleY: fireScale, opacity: fireOpacity, originY: 0 }}
+           className="w-4 md:w-6 h-12 md:h-16 bg-gradient-to-b from-orange-500 via-yellow-400 to-transparent blur-[6px] rounded-full absolute top-[85%] -z-10 mix-blend-screen"
+        />
+        {/* Inner Core Jet stream */}
+        <motion.div
+           style={{ scaleY: fireScale, opacity: fireOpacity, originY: 0 }}
+           className="w-1.5 md:w-2 h-6 md:h-10 bg-gradient-to-b from-white via-cyan-100 to-transparent blur-[3px] rounded-full absolute top-[85%] -z-10 mix-blend-screen shadow-[0_0_10px_white]"
+        />
+      </motion.div>
+
+      <div className="relative mx-auto max-w-6xl z-10">
         <h2
           className={`text-3xl font-bold mb-12 text-center transition-colors duration-500 ${isDarkMode ? "text-white" : "text-black"
             }`}
