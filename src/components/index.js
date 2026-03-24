@@ -5,6 +5,8 @@ import Skills from "./Skills";
 import Platforms from "./Platforms";
 import Projects from "./Projects";
 import Certificates from "./Certificates";
+import Achievements from "./Achievements";
+import Education from "./Education";
 import Footer from "./Footer";
 // import Contact from "./Contact";
 
@@ -16,6 +18,8 @@ export {
   Skills,
   Platforms,
   Projects,
+  Achievements,
+  Education,
   Certificates,
   Footer,
   ScrollToSection,

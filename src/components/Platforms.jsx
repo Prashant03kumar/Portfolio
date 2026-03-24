@@ -50,9 +50,8 @@ export default function Platforms() {
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2
-            className={`text-3xl font-bold transition-colors duration-500 ${
-              isDarkMode ? "text-white" : "text-black"
-            }`}
+            className={`text-3xl font-bold transition-colors duration-500 ${isDarkMode ? "text-white" : "text-black"
+              }`}
           >
             Coding{" "}
             <span className={isDarkMode ? "text-white" : "text-black"}>
@@ -60,11 +59,10 @@ export default function Platforms() {
             </span>
           </h2>
           <p
-            className={`mt-2 italic text-lg transition-colors duration-500 ${
-              isDarkMode ? "text-gray-400" : "text-gray-700"
-            }`}
+            className={`mt-2 italic text-lg transition-colors duration-500 ${isDarkMode ? "text-gray-400" : "text-gray-700"
+              }`}
           >
-            "Over 700+ problems solved across all platforms"
+            "Over 800+ problems solved across all platforms"
           </p>
         </div>
 

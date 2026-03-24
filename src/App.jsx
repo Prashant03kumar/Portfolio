@@ -8,6 +8,8 @@ import {
   Skills,
   Platforms,
   Projects,
+  Achievements,
+  Education,
   Certificates,
   Footer,
   ScrollToSection,
@@ -37,8 +39,10 @@ function App() {
         <Intro />
         <Skills />
         <Platforms />
-        <Projects />
         <Certificates />
+        <Projects />
+        <Achievements />
+        <Education />
       </main>
 
       <Footer />
